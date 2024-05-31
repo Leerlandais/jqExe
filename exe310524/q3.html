@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 2 Animate</title>
+    <script src="queryCDN.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0-beta.1/jquery-ui.min.js" integrity="sha256-eTkBotE66yiuQ4Th2m+9M00ivksRSCZHIphWprTOFls=" crossorigin="anonymous"></script>
+    <style>
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <button>Click</button>
+
+    <script>
+        $(document).ready(function(){
+
+             
+            $("button").click(function(){
+console.log("clicked");
+                $(".box").queue(function(next){
+                    $(".box").animate({width : "300px"},2000);
+                    next();
+                });
+                $(".box").queue(function(next){
+                    $(".box").delay(1000);  // augment ceci pour voir plus facilement le delai
+                    next();
+                });
+                $(".box").queue(function(next){
+                    $(".box").animate({opacity : 0.3},1000);
+                    next();
+                });
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
