@@ -17,12 +17,12 @@ if(isset($_GET['p'])) {
         case 'next' :
             $title = 'jQuery Team Exercise - Next, Prepend, etc';
             $navNext = "disabled";
-            include "../view/public/pubslide.view.php";
+            include "../view/public/pubnext.view.php";
             break;
         case 'animate' :
             $title = 'jQuery Team Exercise - Animation';
             $navAnimate = "disabled";
-            include "../view/public/pubslide.view.php";
+            include "../view/public/pubanimate.view.php";
             break;
         default :
             $title = "Page Not Found";

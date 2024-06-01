@@ -11,34 +11,42 @@
         <title><?=$title?></title>
     </head>
     <body>
-        <div class="text-center text-danger fs-4 mt-5">
-            <?php if (isset($errorMessage)) echo $errorMessage,"<br>";?>
-            </div>
+    <div class="text-center text-danger fs-4 mt-5">
+            <?php // ceci affiche au cas d'erreur dans le BackEnd
+                if (isset($errorMessage)) echo $errorMessage,"<br>";
+            ?>
+        </div>
+
             <div class="container d-flex justify-content-end">
                 <form method="POST" class="d-flex flex-row">
                     <button class="btn langButton langEN" value="en" type="submit" name="user_lang"></button>
                     <button class="btn langButton langFR" value="fr" type="submit" name="user_lang"></button>
                 </form>
             </div>
-            
+            <div class="container d-flex justify-content-end">
             <?php // par defaut les animations sont activer
-
+                if ($_SESSION["headerAnimate"] === "true")  { ?>
+                <form method="POST">
+                        <button class="btn text-secondary" type="submit" name="headerSetting" value="false" id="stopHeaderAnimation"></button>
+                    </form>                    
+                    <?php
+                }else { ?>
+                    <form method="POST">
+                        <button class="btn text-secondary" type="submit" name="headerSetting" value="true" id="startHeaderAnimation"></button>
+                    </form>
+                    <?php } ?>
+            </div>
+                <?php // par defaut les animations sont activer
                 if ($_SESSION["headerAnimate"] === "true")  {
                     include ("inc/header.public.php"); 
                     ?>
-                    <form method="POST">
-                        <button class="btn" type="submit" name="headerSetting" value="false" id="stopHeaderAnimation"></button>
-                    </form>
                     <?php // si l'utilisateur ne veut plus voir l'animation
                 }else {
                     include ("inc/header.public-static.php");
                     ?>
-                    <form method="POST">
-                        <button class="btn" type="submit" name="headerSetting" value="true" id="startHeaderAnimation"></button>
-                    </form>
                     <?php
-                }
-                ?>             
+                }     
+                ?>    
         <?php include("inc/navbar.public.php"); ?>
         
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
