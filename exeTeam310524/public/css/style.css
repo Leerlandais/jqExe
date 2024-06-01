@@ -1,0 +1,47 @@
+@font-face {
+    font-family: HVNThin;
+    src: url("../assets/helvetica-neue-5/HelveticaNeueThin.otf");
+
+    font-family: HVNRoman;
+    src: url("../assets/helvetica-neue-5/HelveticaNeueRoman.otf");
+  }
+
+body {
+  font-family: HVNThin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #073664;
+  color: #869ab8;
+}
+
+.codeWindowHolder {
+  color: #d9e2ef; 
+  font-family: HVNRoman;
+}
+
+.langEN {
+  background-image: url("../img/gb.svg");
+  background-size: cover;
+  width: 2.5vw;
+  height: 2vh;
+  margin: 0 0.5vw;
+}
+
+.langFR {
+  background-image: url("../img/fr.svg");
+  background-size: cover;
+  width: 2.5vw;
+  height: 2vh;
+  margin: 0 0.5vw;
+}
+
+.langFlag {
+  width: 2vw;
+  height: 2vh;
+}
+
+.reset {  /*  This is used to overwrite bootstrap settings (particularly for fieldset and legend) */
+  all: revert;
+}
+
