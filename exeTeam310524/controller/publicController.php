@@ -19,9 +19,7 @@ if (isset($_POST["headerSetting"])){
 
 
     // Appel du page d'accueil public
-    $title = '???HomePublic???';
-    include "../view/public/pubhome.view.php";
-    die ();
+
 
 
 

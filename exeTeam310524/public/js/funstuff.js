@@ -90,6 +90,7 @@ $('#activateCodeButton3').click(function(){
         $(this).text("Et nous nous arrêterons ici");
         next();
     });
+    
 });
 // reset 3 :
 $("#resetWindowButton3").click(function(){

@@ -10,5 +10,6 @@ require_once("../model/textModel.php");
 require_once("../model/settingsModel.php");
 require_once("../controller/jsonController.php");
 require_once("../controller/publicController.php");
+require_once("../controller/routeController.php");
 
 $db = null;
