@@ -52,8 +52,7 @@
                     <button class="btn btn-primary resetWindowButton" id="resetWindowButton0"></button>
                         </div>
                 </div>
-                    </div>
-                </div>
+
             
 
                                 <!-- EXE 1 - Simple Colour Change -->
@@ -70,11 +69,62 @@
                     <button class="btn btn-primary resetWindowButton" id="resetWindowButton1"></button>
                         </div>
                 </div>
+ 
+        
+                                        <!-- EXE 2 - Text and Colour Change with animate -->
+            <div class="container pt-5 codeWindowHolder d-flex flex-column justify-content-center align-items-center">
+                <div class="row text-center">
+                    <p class="h5" id="exe2heading"></p>
+                    <p class="h6 fst-italic" id="exeCodeSnip2"></p>
+            </div>
+                    <div class="mt-1 mb-2 p-5 border rounded-3 w-50 text-center">
+                        <span class="codeDescSpan" id="codeDescSpan2"></span>
                     </div>
+                        <div class="mt-3">
+                    <button class="btn btn-secondary text-white activateCodeButton" id="activateCodeButton2"></button>
+                    <button class="btn btn-primary resetWindowButton" id="resetWindowButton2"></button>
+                        </div>
                 </div>
-        
-        
-        
+                    
+
+
+
+
+                                        <!-- EXE 3 - Text and Colour Change with animate -->
+            <div class="container pt-5 codeWindowHolder d-flex flex-column justify-content-center align-items-center">
+                <div class="row text-center">
+                    <p class="h5" id="exe3heading"></p>
+                    <p class="h6 fst-italic" id="exeCodeSnip3"></p>
+            </div>
+                    <div class="mt-1 mb-2 p-5 border rounded-3 w-50 text-center">
+                        <span class="codeDescSpan" id="codeDescSpan3"></span>
+                    </div>
+                        <div class="mt-3">
+                    <button class="btn btn-secondary text-white activateCodeButton" id="activateCodeButton3"></button>
+                    <button class="btn btn-primary resetWindowButton" id="resetWindowButton3"></button>
+                        </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
         <?php include ("inc/footer.public.php"); ?>
         </div>        
     <?php include ("../view/cdn/jsBS.php") ?>

@@ -41,7 +41,9 @@ $('#activateCodeButton0').click(function(){
 // reset 0 :
 $("#resetWindowButton0").click(function(){
     $("#codeDescSpan0").text($textHolder); // réinitialise texte (en Ang/Fr)
-})
+});
+
+
 
 // Example 1 :
 $('#activateCodeButton1').click(function(){ // même que précedent avec couleur change
@@ -49,11 +51,49 @@ $('#activateCodeButton1').click(function(){ // même que précedent avec couleur
     $("#codeDescSpan1").css('color', 'yellow'); 
     $("#codeDescSpan1").text("Voilà, ma couleur a changé"); 
 });
-// reset 0 :
+// reset 1 :
 $("#resetWindowButton1").click(function(){
     $("#codeDescSpan1").text($textHolder); 
     $("#codeDescSpan1").css('color', '#d9e2ef'); 
-})
+});
+
+
+// Example 2 :
+$('#activateCodeButton2').click(function(){ 
+    $textHolder = $("#codeDescSpan2").text(); 
+    $("#codeDescSpan2").css("color" , 'red').text("Mon texte et ma couleur ont changé"); 
+});
+// reset 2 :
+$("#resetWindowButton2").click(function(){
+    $("#codeDescSpan2").text($textHolder); 
+    $("#codeDescSpan2").css('color', '#d9e2ef'); 
+});
+
+
+// Example 3 :
+$('#activateCodeButton3').click(function(){
+    // while trying to get this to work properly, a thorough search of docs shows a better way to write the queue....
+
+
+    $("#codeDescSpan3").text("D'abord, mon text change").delay(1000).queue(function(next){ // change the text and wait
+        $(this).text("Puis ma couleur..."); // then the colour
+        next();
+        // note the next step is attached
+    }).animate({color: "green"}, 2000).delay(2000).queue(function(next){
+        $(this).text("Et maintenant je change de couleur encore une fois");
+        next();
+        // as is this one
+    }).animate({color: "#d9e2ef"}, 2000).queue(function(next){
+        $(this).text("Et nous nous arrêterons ici");
+        next();
+    });
+});
+
+
+
+
+
+
 
 
 
