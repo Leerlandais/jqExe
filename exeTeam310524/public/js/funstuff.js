@@ -35,14 +35,27 @@ $("#introHeading5").queue(function(next){
 
 // Example 0 :
 $('#activateCodeButton0').click(function(){
-    $textHolder = $("#codeDescSpan0").text();
-    console.log($textHolder);
-    $("#codeDescSpan0").text("Voilà, mon texte a changé");
+    $textHolder = $("#codeDescSpan0").text(); // d'abord copier le texte (puisque il vient du DB)
+    $("#codeDescSpan0").text("Voilà, mon texte a changé"); // puis changer
 });
 // reset 0 :
 $("#resetWindowButton0").click(function(){
-    $("#codeDescSpan0").text($textHolder);
+    $("#codeDescSpan0").text($textHolder); // réinitialise texte (en Ang/Fr)
 })
+
+// Example 1 :
+$('#activateCodeButton1').click(function(){ // même que précedent avec couleur change
+    $textHolder = $("#codeDescSpan1").text(); 
+    $("#codeDescSpan1").css('color', 'yellow'); 
+    $("#codeDescSpan1").text("Voilà, ma couleur a changé"); 
+});
+// reset 0 :
+$("#resetWindowButton1").click(function(){
+    $("#codeDescSpan1").text($textHolder); 
+    $("#codeDescSpan1").css('color', '#d9e2ef'); 
+})
+
+
 
 
 }); // end document ready

@@ -38,8 +38,8 @@
                 }
             ?>     
 
-            
-            <div class="container pt-5 codeWindowHolder d-flex flex-column justify-content-center align-items-center">
+                <!-- EXE 0 - Simple Text Change -->
+            <div class="container pt-5 mb-3 codeWindowHolder d-flex flex-column justify-content-center align-items-center">
                 <div class="row text-center">
                     <p class="h5" id="exe0heading"></p>
                     <p class="h6 fst-italic" id="exeCodeSnip0"></p>
@@ -56,6 +56,22 @@
                 </div>
             
 
+                                <!-- EXE 1 - Simple Colour Change -->
+            <div class="container pt-5 codeWindowHolder d-flex flex-column justify-content-center align-items-center">
+                <div class="row text-center">
+                    <p class="h5" id="exe1heading"></p>
+                    <p class="h6 fst-italic" id="exeCodeSnip1"></p>
+            </div>
+                    <div class="mt-1 mb-2 p-5 border rounded-3 w-50 text-center">
+                        <span class="codeDescSpan" id="codeDescSpan1"></span>
+                    </div>
+                        <div class="mt-3">
+                    <button class="btn btn-secondary text-white activateCodeButton" id="activateCodeButton1"></button>
+                    <button class="btn btn-primary resetWindowButton" id="resetWindowButton1"></button>
+                        </div>
+                </div>
+                    </div>
+                </div>
         
         
         
